@@ -118,6 +118,12 @@
                             <type>zip</type>
                             <target>/apps/aemproject-vendor-packages/application/install</target>
                         </embedded>
+                        <embedded>
+                            <groupId>com.amazonaws</groupId>
+                            <artifactId>aws-java-sdk-s3</artifactId>
+                            <filter>true</filter>
+                            <target>/apps/aemproject/install</target>
+                        </embedded>
                     </embeddeds>
                     <subPackages>
                         <subPackage>
@@ -272,6 +278,10 @@
             <artifactId>acs-aem-commons-content</artifactId>
             <type>zip</type>
             <classifier>min</classifier>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-s3</artifactId>
         </dependency>
     </dependencies>
 </project>

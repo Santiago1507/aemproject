@@ -45,6 +45,7 @@
         <vault.password>admin</vault.password>
         <frontend-maven-plugin.version>1.12.0</frontend-maven-plugin.version>
         <core.wcm.components.version>2.21.2</core.wcm.components.version>
+        <com.adobe.acs.commons.version>4.7.2</com.adobe.acs.commons.version>
 
         <bnd.version>5.1.2</bnd.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -744,6 +745,23 @@ Bundle-DocURL:
                 <version>${core.wcm.components.version}</version>
             </dependency>
 
+            <!--ACS Commons Bundle for compile -->
+            <dependency>
+                <groupId>com.adobe.acs</groupId>
+                <artifactId>acs-aem-commons-bundle</artifactId>
+                <version>${com.adobe.acs.commons.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!--ACS Commons Content for bundle install -->
+            <dependency>
+                <groupId>com.adobe.acs</groupId>
+                <artifactId>acs-aem-commons-content</artifactId>
+                <version>${com.adobe.acs.commons.version}</version>
+                <type>zip</type>
+                <classifier>min</classifier>
+                <scope>provided</scope>
+            </dependency>
 
             <!-- Testing -->
             <dependency>
